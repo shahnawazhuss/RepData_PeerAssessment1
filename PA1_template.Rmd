@@ -108,6 +108,7 @@ for (subInterval in meanInterval)
         activity[rows,"steps"]<-(meanIntervalSteps$Mean)
         }       
 #Displaying find few rows of Imputed dataset
+#transformed activity dataset as new dataset that is equal to the original dataset but with the #missing data filled in.
 xt1<-xtable(activity)
 xt1$date<-as.character(xt1$date)
 print(head(xt1),type="html")

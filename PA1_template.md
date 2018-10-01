@@ -102,7 +102,7 @@ print(head(stepday),type="html") #Printing only first 6 Lines of steps each day 
 ```
 
 <!-- html table generated in R 3.4.3 by xtable 1.8-3 package -->
-<!-- Sun Sep 30 21:51:52 2018 -->
+<!-- Mon Oct  1 01:31:36 2018 -->
 <table border=1>
 <tr> <th>  </th> <th> Date </th> <th> Total Steps </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 2012-10-01 </td> <td align="right">   0 </td> </tr>
@@ -177,13 +177,14 @@ for (subInterval in meanInterval)
         activity[rows,"steps"]<-(meanIntervalSteps$Mean)
         }       
 #Displaying find few rows of Imputed dataset
+#transformed activity dataset as new dataset that is equal to the original dataset but with the #missing data filled in.
 xt1<-xtable(activity)
 xt1$date<-as.character(xt1$date)
 print(head(xt1),type="html")
 ```
 
 <!-- html table generated in R 3.4.3 by xtable 1.8-3 package -->
-<!-- Sun Sep 30 21:51:53 2018 -->
+<!-- Mon Oct  1 01:31:37 2018 -->
 <table border=1>
 <tr> <th>  </th> <th> steps </th> <th> date </th> <th> interval </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 1.72 </td> <td align="right"> 2012-10-01 </td> <td align="right">   0 </td> </tr>
@@ -236,3 +237,4 @@ ggplot(StepsIntDayType,aes(interval,TotalMean,col=weekdaytype))+
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+ 
